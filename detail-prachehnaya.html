@@ -11,7 +11,391 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         #instructions {
-            scroll-margin-top: 15px !important;
+            scroll-margin-top: 120px !important;
+        }
+        
+        /* Анимированные карточки оборудования */
+        .equipment-item {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 1px solid rgba(107, 70, 193, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .equipment-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(107, 70, 193, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .equipment-item:hover::before {
+            left: 100%;
+        }
+        
+        .equipment-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(107, 70, 193, 0.2);
+            border-color: rgba(107, 70, 193, 0.3);
+        }
+        
+        .equipment-item i {
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+        
+        .equipment-item:hover i {
+            transform: scale(1.1) rotate(5deg);
+            filter: drop-shadow(0 4px 8px rgba(107, 70, 193, 0.3));
+        }
+        
+        /* Улучшенные карточки с информацией */
+        .detail-info-item {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .detail-info-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            transition: right 0.8s ease;
+        }
+        
+        .detail-info-item:hover::after {
+            right: 100%;
+        }
+        
+        /* Анимированные инструкции */
+        .instruction-item {
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: slideInLeft 0.6s ease-out forwards;
+        }
+        
+        .instruction-item:nth-child(1) { animation-delay: 0.1s; }
+        .instruction-item:nth-child(2) { animation-delay: 0.2s; }
+        .instruction-item:nth-child(3) { animation-delay: 0.3s; }
+        .instruction-item:nth-child(4) { animation-delay: 0.4s; }
+        .instruction-item:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Пульсирующая анимация для важных элементов */
+        .detail-warning {
+            animation: warningPulse 3s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .detail-warning::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.2), transparent);
+            animation: warningShine 4s ease-in-out infinite;
+        }
+        
+        @keyframes warningPulse {
+            0%, 100% {
+                box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+            }
+            50% {
+                box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+            }
+        }
+        
+        @keyframes warningShine {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+        
+        /* Анимированная подсветка для ссылки на платформу */
+        .inline-link {
+            position: relative;
+            background: linear-gradient(135deg, rgba(107, 70, 193, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .inline-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(107, 70, 193, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .inline-link:hover::before {
+            opacity: 1;
+        }
+        
+        .inline-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(107, 70, 193, 0.2);
+        }
+        
+        /* Улучшенная анимация для карточек постельного белья */
+        .bedding-item {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bedding-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.15), transparent);
+            transition: left 0.8s ease;
+        }
+        
+        .bedding-item:hover::after {
+            left: 100%;
+        }
+        
+        /* Плавающая анимация для иконок */
+        .bedding-item__icon {
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+        
+        .bedding-item:nth-child(1) .bedding-item__icon { animation-delay: 0s; }
+        .bedding-item:nth-child(2) .bedding-item__icon { animation-delay: 0.5s; }
+        .bedding-item:nth-child(3) .bedding-item__icon { animation-delay: 1s; }
+        .bedding-item:nth-child(4) .bedding-item__icon { animation-delay: 1.5s; }
+        
+        @keyframes iconFloat {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-3px) scale(1.05);
+            }
+        }
+        
+        /* Анимированные заголовки */
+        .detail-card__title {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .detail-card__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #FFD700, #6B46C1);
+            transition: width 0.6s ease;
+        }
+        
+        .detail-card:hover .detail-card__title::after {
+            width: 100%;
+        }
+        
+        /* Улучшенная анимация появления карточек */
+        .detail-card {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: cardSlideUp 0.8s ease-out forwards;
+        }
+        
+        .detail-card:nth-child(1) { animation-delay: 0.1s; }
+        .detail-card:nth-child(2) { animation-delay: 0.2s; }
+        .detail-card:nth-child(3) { animation-delay: 0.3s; }
+        .detail-card:nth-child(4) { animation-delay: 0.4s; }
+        .detail-card:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes cardSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Анимированная подсветка для важной информации */
+        .detail-info-highlight {
+            position: relative;
+            overflow: hidden;
+            animation: highlightGlow 4s ease-in-out infinite;
+        }
+        
+        .detail-info-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(107, 70, 193, 0.1), transparent);
+            animation: highlightShine 3s ease-in-out infinite;
+        }
+        
+        @keyframes highlightGlow {
+            0%, 100% {
+                box-shadow: 0 4px 12px rgba(107, 70, 193, 0.2);
+            }
+            50% {
+                box-shadow: 0 8px 20px rgba(107, 70, 193, 0.3);
+            }
+        }
+        
+        @keyframes highlightShine {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+        
+        /* Анимация для фото-плейсхолдеров */
+        .photo-placeholder {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .photo-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.8s ease;
+        }
+        
+        .photo-placeholder:hover::before {
+            left: 100%;
+        }
+        
+        .photo-placeholder:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Анимация для видео-плейсхолдера */
+        .video-placeholder {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-placeholder i {
+            animation: playIconPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes playIconPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+        
+        /* Улучшенная анимация для сайдбара */
+        .detail-sidebar .detail-card {
+            animation-delay: 0.6s;
+        }
+        
+        .related-links a {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .related-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(107, 70, 193, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .related-links a:hover::before {
+            left: 100%;
+        }
+        
+        /* Анимация для кнопки помощи */
+        .help-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .help-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+        
+        .help-btn:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Responsive анимации */
+        @media (max-width: 768px) {
+            .equipment-item:hover {
+                transform: translateY(-4px) scale(1.01);
+            }
+            
+            .detail-card {
+                animation-duration: 0.6s;
+            }
+        }
+        
+        /* Accessibility - уменьшение анимаций для пользователей с ограниченными возможностями */
+        @media (prefers-reduced-motion: reduce) {
+            .equipment-item,
+            .detail-info-item,
+            .instruction-item,
+            .bedding-item,
+            .detail-card {
+                animation: none !important;
+                transition-duration: 0.1s !important;
+            }
+            
+            .bedding-item__icon {
+                animation: none !important;
+            }
+        }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -65,7 +449,7 @@
                         Прачечная
                     </h1>
                     <p class="detail-hero__description">
-                        Полная информация о прачечной общежития №2 МГИМО - график работы, оборудование и правила использования
+                        Современная прачечная с удобной системой бронирования — ваш помощник в поддержании чистоты и порядка
                     </p>
                 </div>
             </div>
@@ -91,7 +475,7 @@
                                     <div class="detail-info-item__content">
                                         <h3>Режим работы</h3>
                                         <p>Ежедневно с 9:00 до 23:00</p>
-                                        <span class="detail-info-item__note">Ночные администраторы работают с 21:00 до 23:00 по предварительной записи</span>
+                                        <span class="detail-info-item__note">Вечерние слоты доступны до 23:00</span>
                                     </div>
                                 </div>
                                 
@@ -125,6 +509,14 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="detail-info-highlight" style="margin-top: 2rem;">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h4>Удобство и комфорт</h4>
+                                    <p>Современное оборудование и простая система бронирования делают стирку быстрой и приятной процедурой!</p>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Equipment -->
@@ -145,9 +537,24 @@
                                     <p>Удобные сушилки для сушки вещей</p>
                                 </div>
                                 <div class="equipment-item">
-                                    <i class="fas fa-shirt" style="color: #6B46C1;"></i>
+                                    <i class="fas fa-iron" style="color: #6B46C1;"></i>
                                     <h3>Гладильные доски</h3>
                                     <p>Всё необходимое для глажки</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <h3>Контроль температуры</h3>
+                                    <p>Различные режимы стирки</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-clock" style="color: #6B46C1;"></i>
+                                    <h3>Таймер</h3>
+                                    <p>Точное время стирки и сушки</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <h3>Безопасность</h3>
+                                    <p>Современные системы защиты</p>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +599,16 @@
                             <div class="detail-info-highlight">
                                 <i class="fas fa-clock"></i>
                                 <div>
+                                    <h4>Продолжительность слота</h4>
                                     <p>Один слот — 1 час 15 минут</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-info-highlight" style="margin-top: 1.5rem; background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%); border-left-color: #0EA5E9;">
+                                <i class="fas fa-lightbulb" style="color: #0EA5E9;"></i>
+                                <div>
+                                    <h4 style="color: #0EA5E9;">Совет</h4>
+                                    <p style="color: #0EA5E9;">Бронируйте слоты заранее, особенно в выходные дни — это самое популярное время!</p>
                                 </div>
                             </div>
                         </div>
@@ -204,8 +620,16 @@
                                 Смена постельного белья
                             </h2>
                             <p class="detail-description">
-                                По пути к прачечной (не доходя до большого холла) слева от лестницы находится комната для обмена белья. Работает с 9:00 до 18:00 в будние дни.
+                                По пути к прачечной (не доходя до большого холла) слева от лестницы находится комната для обмена белья.
                             </p>
+                            
+                            <div class="detail-info-highlight" style="margin: 1.5rem 0; background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-left-color: #F59E0B;">
+                                <i class="fas fa-calendar-alt" style="color: #F59E0B;"></i>
+                                <div>
+                                    <h4 style="color: #F59E0B;">Режим работы</h4>
+                                    <p style="color: #F59E0B;">Понедельник - Пятница: 9:00 - 18:00</p>
+                                </div>
+                            </div>
                             
                             <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--primary-purple);">Полный комплект включает:</h3>
                             <ul class="bedding-list animated-list">
@@ -242,6 +666,31 @@
                                     </div>
                                 </li>
                             </ul>
+                        </div>
+
+                        <!-- Tips and Tricks -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-lightbulb"></i>
+                                Полезные советы
+                            </h2>
+                            <div class="equipment-grid">
+                                <div class="equipment-item">
+                                    <i class="fas fa-clock" style="color: #6B46C1;"></i>
+                                    <h3>Планируйте заранее</h3>
+                                    <p>Бронируйте слоты на несколько дней вперед</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-tshirt"></i>
+                                    <h3>Сортируйте белье</h3>
+                                    <p>Разделяйте по цветам и типу ткани</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-mobile-alt" style="color: #6B46C1;"></i>
+                                    <h3>Используйте таймер</h3>
+                                    <p>Ставьте напоминание на телефоне</p>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Photos Section -->
@@ -290,9 +739,10 @@
                                 Другие помещения
                             </h3>
                             <ul class="related-links">
-                                <li><a href="detail-kuhni.html">Кухни</a></li>
+                                <li><a href="detail-kitchen.html">Кухни</a></li>
                                 <li><a href="detail-kinosal.html">Кинозал</a></li>
-                                <li><a href="detail-ucheba.html">Учебные пространства</a></li>
+                                <li><a href="detail-reading.html">Читальный зал</a></li>
+                                <li><a href="detail-coworking.html">Коворкинг</a></li>
                                 <li><a href="detail-storage.html">Камеры хранения</a></li>
                                 <li><a href="infrastructure.html" class="back-link">Вернуться к инфраструктуре</a></li>
                             </ul>
