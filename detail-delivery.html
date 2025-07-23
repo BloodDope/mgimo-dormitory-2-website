@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пункты выдачи - Общежитие №2 МГИМО</title>
+    <meta name="description" content="Подробная информация о пунктах выдачи рядом с общежитием №2 МГИМО">
+    <link rel="stylesheet" href="assets/css/style.css?v=8">
+    <link rel="stylesheet" href="assets/css/infrastructure.css?v=4">
+    <link rel="stylesheet" href="assets/css/detail.css?v=9">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        #instructions {
+            scroll-margin-top: 120px;
+        }
+        
+        /* Стили для карточек сервисов доставки - делаем их кликабельными */
+        .equipment-grid .equipment-item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .equipment-grid .equipment-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Стили для контейнеров с картинками сервисов доставки */
+        .delivery-image-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .delivery-image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: var(--light-gray-color);
+            border: 2px dashed var(--border-color);
+            border-radius: var(--border-radius);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color-light);
+        }
+        
+        .delivery-image-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .delivery-image-placeholder p {
+            font-size: var(--font-size-sm);
+            text-align: center;
+        }
+        
+        /* Стили для информационных полосок сервисов доставки */
+        .delivery-info-strip {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .info-strip-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .info-strip-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .info-strip-item:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .info-strip-item:hover::before {
+            left: 100%;
+        }
+        
+        .info-strip-item i {
+            font-size: 1.4rem;
+            color: white;
+            min-width: 28px;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+        
+        .info-strip-item span {
+            font-size: 1rem;
+            color: white;
+            font-weight: 700;
+            line-height: 1.5;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            letter-spacing: 0.3px;
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+        }
+        
+        /* Разные цвета для разных типов информации */
+        .info-strip-item:nth-child(1) {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .info-strip-item:nth-child(2) {
+            background: linear-gradient(135deg, #ffd700 0%, #ff8c00 50%, #ff4500 100%);
+        }
+        
+        .info-strip-item:nth-child(1):hover {
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .info-strip-item:nth-child(2):hover {
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="index.html#home" class="nav__logo">
+                    <img src="assets/images/logo.svg" alt="МГИМО" class="nav__logo-img">
+                    <span>Общежитие №2</span>
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html#home" class="nav__link">Главная</a></li>
+                    <li><a href="index.html#contacts" class="nav__link">Контакты</a></li>
+                    <li><a href="index.html#location" class="nav__link">Адреса</a></li>
+                    <li><a href="infrastructure.html" class="nav__link">Инфраструктура</a></li>
+                    <li><a href="index.html#rules" class="nav__link">Правила</a></li>
+                    <li><a href="index.html#student-council" class="nav__link">Студсовет</a></li>
+                    <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Detail Hero Section -->
+        <section class="detail-hero section">
+            <div class="container">
+                <div class="detail-hero__content">
+                    <div class="detail-hero__breadcrumb">
+                        <a href="infrastructure.html">Инфраструктура района</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Пункты выдачи</span>
+                    </div>
+                    <h1 class="detail-hero__title">
+                        <i class="fas fa-box"></i>
+                        Пункты выдачи
+                    </h1>
+                    <p class="detail-hero__description">
+                        Получение посылок и заказов из интернет-магазинов рядом с общежитием
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detail Content -->
+        <section class="detail-content section">
+            <div class="container">
+                <div class="detail-grid">
+                    <!-- Main Info -->
+                    <div class="detail-main">
+                        <!-- Basic Info -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-info-circle"></i>
+                                Основная информация
+                            </h2>
+                            <div class="detail-info-grid">
+                                <div class="detail-info-item">
+                                    <div class="detail-info-item__icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="detail-info-item__content">
+                                        <h3>Время в пути</h3>
+                                        <p>10-15 минут пешком</p>
+                                        <span class="detail-info-item__note">До ближайших пунктов</span>
+                                    </div>
+                                </div>
+                                
+
+                                
+                                <div class="detail-info-item">
+                                    <div class="detail-info-item__icon">
+                                        <i class="fas fa-shipping-fast"></i>
+                                    </div>
+                                    <div class="detail-info-item__content">
+                                        <h3>Сервисы</h3>
+                                        <p>Озон, Вайлберриз, Яндекс.Маркет, Почта России, CDEK</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delivery Services -->
+                        <div class="detail-card" id="services">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-shipping-fast"></i>
+                                Сервисы доставки
+                            </h2>
+                            <div class="equipment-grid">
+                                <div class="equipment-item" onclick="scrollToDeliveryImage('ozon')">
+                                    <i class="fas fa-shopping-bag" style="color: #6B46C1;"></i>
+                                    <h3>Озон</h3>
+                                </div>
+                                <div class="equipment-item" onclick="scrollToDeliveryImage('wildberries')">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <h3>Вайлберриз</h3>
+                                </div>
+                                <div class="equipment-item" onclick="scrollToDeliveryImage('yandex')">
+                                    <i class="fas fa-shopping-bag" style="color: #6B46C1;"></i>
+                                    <h3>Яндекс.Маркет</h3>
+                                </div>
+                                <div class="equipment-item" onclick="scrollToDeliveryImage('post')">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>Почта России</h3>
+                                </div>
+                                <div class="equipment-item" onclick="scrollToDeliveryImage('cdek')">
+                                    <i class="fas fa-truck" style="color: #6B46C1;"></i>
+                                    <h3>CDEK</h3>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Delivery Service Images Section -->
+                        <!-- Ozon Image -->
+                        <div class="detail-card" id="ozon">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-shopping-bag" style="color: #6B46C1;"></i>
+                                Озон
+                            </h2>
+                            <div class="delivery-image-container">
+                                <div class="delivery-image-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Фото пункта выдачи Озона</p>
+                                </div>
+                            </div>
+                            <div class="delivery-info-strip">
+                                <div class="info-strip-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Ул. Коштоянца, 33 (отделение почты)</span>
+                                </div>
+                                <div class="info-strip-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Пн-Пт: 8:00-20:00 | Сб-Вс: 9:00-18:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wildberries Image -->
+                        <div class="detail-card" id="wildberries">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-shopping-bag"></i>
+                                Вайлберриз
+                            </h2>
+                            <div class="delivery-image-container">
+                                <div class="delivery-image-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Фото пункта выдачи Wildberries</p>
+                                </div>
+                            </div>
+                            <div class="delivery-info-strip">
+                                <div class="info-strip-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Ул. Коштоянца, 33 (отделение почты)</span>
+                                </div>
+                                <div class="info-strip-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Пн-Пт: 8:00-20:00 | Сб-Вс: 9:00-18:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Yandex Market Image -->
+                        <div class="detail-card" id="yandex">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-shopping-bag" style="color: #6B46C1;"></i>
+                                Яндекс.Маркет
+                            </h2>
+                            <div class="delivery-image-container">
+                                <div class="delivery-image-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Фото пункта выдачи Яндекс.Маркета</p>
+                                </div>
+                            </div>
+                            <div class="delivery-info-strip">
+                                <div class="info-strip-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Ул. Коштоянца, 33 (отделение почты)</span>
+                                </div>
+                                <div class="info-strip-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Пн-Пт: 8:00-20:00 | Сб-Вс: 9:00-18:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Post Russia Image -->
+                        <div class="detail-card" id="post">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-envelope"></i>
+                                Почта России
+                            </h2>
+                            <div class="delivery-image-container">
+                                <div class="delivery-image-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Фото отделения почты</p>
+                                </div>
+                            </div>
+                            <div class="delivery-info-strip">
+                                <div class="info-strip-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Ул. Коштоянца, 33</span>
+                                </div>
+                                <div class="info-strip-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Пн-Пт: 8:00-20:00 | Сб-Вс: 9:00-18:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CDEK Image -->
+                        <div class="detail-card" id="cdek">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-truck" style="color: #6B46C1;"></i>
+                                CDEK
+                            </h2>
+                            <div class="delivery-image-container">
+                                <div class="delivery-image-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Фото пункта выдачи CDEK</p>
+                                </div>
+                            </div>
+                            <div class="delivery-info-strip">
+                                <div class="info-strip-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Ул. Коштоянца, 33 (отделение почты)</span>
+                                </div>
+                                <div class="info-strip-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Пн-Пт: 8:00-20:00 | Сб-Вс: 9:00-18:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Video Section -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-video"></i>
+                                Видео
+                            </h2>
+                            <div class="video-container">
+                                <div class="video-placeholder">
+                                    <i class="fas fa-play-circle"></i>
+                                    <h3>Как получить посылку</h3>
+                                    <p>Место для прикрепления видео</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="detail-sidebar">
+                        <div class="detail-card">
+                            <h3 class="detail-card__title">
+                                <i class="fas fa-map-marked-alt"></i>
+                                Другие места района
+                            </h3>
+                            <ul class="related-links">
+                                <li><a href="detail-groceries.html">Продуктовые магазины</a></li>
+                                <li><a href="detail-transport.html">Транспорт</a></li>
+                                <li><a href="detail-medicine.html">Медицина</a></li>
+                                <li><a href="detail-sport.html">Спорт и отдых</a></li>
+                                <li><a href="detail-shopping.html">Торговые центры</a></li>
+                                <li><a href="detail-food.html">Кафе и рестораны</a></li>
+                                <li><a href="detail-services.html">МФЦ и услуги</a></li>
+                                <li><a href="infrastructure.html" class="back-link">Вернуться к инфраструктуре</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-card">
+                            <h3 class="detail-card__title">
+                                <i class="fas fa-question-circle"></i>
+                                Нужна помощь?
+                            </h3>
+                            <p>Если у вас возникли вопросы по получению посылок, обратитесь к студсовету или администратору общежития.</p>
+                            <a href="index.html#contacts" class="help-btn">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <p>&copy; 2024 Общежитие №2 МГИМО. Информационный гид для первокурсников.</p>
+                </div>
+                <div class="footer__links">
+                    <a href="index.html#home">Главная</a>
+                    <a href="infrastructure.html">Инфраструктура</a>
+                    <a href="index.html#contacts">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Функция для плавного перехода к картинкам сервисов доставки
+        function scrollToDeliveryImage(serviceId) {
+            const target = document.getElementById(serviceId);
+            if (target) {
+                const header = document.querySelector('.header');
+                const headerHeight = header ? header.offsetHeight : 80;
+                const targetPosition = target.offsetTop - headerHeight - 40;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // Прокрутка для ссылок location-link - выполняется ДО main.js
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.location-link');
+            
+            links.forEach(function(link) {
+                link.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const header = document.querySelector('.header');
+                        const headerHeight = header ? header.offsetHeight : 80;
+                        const targetPosition = target.offsetTop - headerHeight - 40;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                };
+            });
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.classList.contains('animated-list')) {
+                        const items = entry.target.querySelectorAll('.bedding-item');
+                        items.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('visible');
+                            }, index * 100);
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.fade-in, .equipment-item, .detail-info-item, .animated-list, .bedding-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 

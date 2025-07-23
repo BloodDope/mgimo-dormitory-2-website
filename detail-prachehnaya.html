@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прачечная - Общежитие №2 МГИМО</title>
+    <meta name="description" content="Подробная информация о прачечной в общежитии №2 МГИМО">
+    <link rel="stylesheet" href="assets/css/style.css?v=8">
+    <link rel="stylesheet" href="assets/css/infrastructure.css?v=4">
+    <link rel="stylesheet" href="assets/css/detail.css?v=7">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        #instructions {
+            scroll-margin-top: 15px !important;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="index.html#home" class="nav__logo">
+                    <img src="assets/images/logo.svg" alt="МГИМО" class="nav__logo-img">
+                    <span>Общежитие №2</span>
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html#home" class="nav__link">Главная</a></li>
+                    <li><a href="index.html#contacts" class="nav__link">Контакты</a></li>
+                    <li><a href="index.html#location" class="nav__link">Адреса</a></li>
+                    <li><a href="infrastructure.html" class="nav__link">Инфраструктура</a></li>
+                    <li><a href="index.html#rules" class="nav__link">Правила</a></li>
+                    <li><a href="index.html#student-council" class="nav__link">Студсовет</a></li>
+                    <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Detail Hero Section -->
+        <section class="detail-hero section">
+            <div class="container">
+                <div class="detail-hero__content">
+                    <div class="detail-hero__breadcrumb">
+                        <a href="infrastructure.html">Инфраструктура</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Прачечная</span>
+                    </div>
+                    <h1 class="detail-hero__title">
+                        <i class="fas fa-tshirt"></i>
+                        Прачечная
+                    </h1>
+                    <p class="detail-hero__description">
+                        Полная информация о прачечной общежития №2 МГИМО - график работы, оборудование и правила использования
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detail Content -->
+        <section class="detail-content section">
+            <div class="container">
+                <div class="detail-grid">
+                    <!-- Main Info -->
+                    <div class="detail-main">
+                        <!-- Basic Info -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-info-circle"></i>
+                                Основная информация
+                            </h2>
+                            <div class="detail-info-grid">
+                                <div class="detail-info-item">
+                                    <div class="detail-info-item__icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="detail-info-item__content">
+                                        <h3>Режим работы</h3>
+                                        <p>Ежедневно с 9:00 до 23:00</p>
+                                        <span class="detail-info-item__note">Ночные администраторы работают с 21:00 до 23:00 по предварительной записи</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-info-item">
+                                    <div class="detail-info-item__icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="detail-info-item__content">
+                                        <h3>Расположение</h3>
+                                        <p>-1 этаж</p>
+                                        <span class="detail-info-item__note">
+                                            <a href="#instructions" class="location-link">
+                                                Как найти прачечную?
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-info-item">
+                                    <div class="detail-info-item__icon">
+                                        <i class="fas fa-credit-card"></i>
+                                    </div>
+                                    <div class="detail-info-item__content">
+                                        <h3>Бронирование</h3>
+                                        <p>С помощью <a href="https://dorm.mgimo.ru/" target="_blank" class="inline-link">электронной платформы</a></p>
+                                        <span class="detail-info-item__note">
+                                            <a href="#booking-instructions" class="location-link">
+                                                Как записаться?
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Equipment -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-cogs"></i>
+                                Оборудование
+                            </h2>
+                            <div class="equipment-grid">
+                                <div class="equipment-item">
+                                    <i class="fas fa-soap" style="color: #6B46C1;"></i>
+                                    <h3>Стиральные машины</h3>
+                                    <p>Современные стиральные машины</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-wind"></i>
+                                    <h3>Сушилки для белья</h3>
+                                    <p>Удобные сушилки для сушки вещей</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-shirt" style="color: #6B46C1;"></i>
+                                    <h3>Гладильные доски</h3>
+                                    <p>Всё необходимое для глажки</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Instructions -->
+                        <div class="detail-card" id="instructions">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-list-ol"></i>
+                                Как найти прачечную?
+                            </h2>
+                            <ol class="instruction-list animated-list">
+                                <li class="instruction-item">Спуститесь на первый этаж</li>
+                                <li class="instruction-item">Сверните в коридор справа от лифтов</li>
+                                <li class="instruction-item">Спуститесь по лестнице</li>
+                                <li class="instruction-item">Пройдите до большого холла</li>
+                                <li class="instruction-item">Сверните в левый коридор и идите до конца</li>
+                            </ol>
+                            
+                            <div class="detail-warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <h4>Важно!</h4>
+                                    <p>Не забывайте забирать одежду <strong>вовремя</strong>, чтобы она не скапливалась на сушилках и в тазах!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Booking Instructions -->
+                        <div class="detail-card" id="booking-instructions">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-calendar-check"></i>
+                                Как записаться?
+                            </h2>
+                            <ol class="instruction-list animated-list">
+                                <li class="instruction-item">
+                                    <a href="https://dorm.mgimo.ru/" target="_blank" class="inline-link">Зайдите на электронную платформу Roscampus</a>
+                                </li>
+                                <li class="instruction-item">Создайте новую заявку в разделе "Заявки и услуги"</li>
+                                <li class="instruction-item">Подтвердите данные и выберите удобное время</li>
+                            </ol>
+                            
+                            <div class="detail-info-highlight">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <p>Один слот — 1 час 15 минут</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bedding Change -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-bed"></i>
+                                Смена постельного белья
+                            </h2>
+                            <p class="detail-description">
+                                По пути к прачечной (не доходя до большого холла) слева от лестницы находится комната для обмена белья. Работает с 9:00 до 18:00 в будние дни.
+                            </p>
+                            
+                            <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--primary-purple);">Полный комплект включает:</h3>
+                            <ul class="bedding-list animated-list">
+                                <li class="bedding-item">
+                                    <div class="bedding-item__icon">
+                                        <i class="fas fa-square"></i>
+                                    </div>
+                                    <div class="bedding-item__content">
+                                        <span>Простыня</span>
+                                    </div>
+                                </li>
+                                <li class="bedding-item">
+                                    <div class="bedding-item__icon">
+                                        <i class="fas fa-layer-group"></i>
+                                    </div>
+                                    <div class="bedding-item__content">
+                                        <span>Пододеяльник</span>
+                                    </div>
+                                </li>
+                                <li class="bedding-item">
+                                    <div class="bedding-item__icon">
+                                        <i class="fas fa-circle"></i>
+                                    </div>
+                                    <div class="bedding-item__content">
+                                        <span>Наволочка</span>
+                                    </div>
+                                </li>
+                                <li class="bedding-item">
+                                    <div class="bedding-item__icon">
+                                        <i class="fas fa-bath"></i>
+                                    </div>
+                                    <div class="bedding-item__content">
+                                        <span>Полотенца для тела и лица</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Photos Section -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-images"></i>
+                                Фотографии
+                            </h2>
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Место для фото прачечной</p>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Место для фото оборудования</p>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Место для фото процесса стирки</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Section -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-video"></i>
+                                Видео
+                            </h2>
+                            <div class="video-container">
+                                <div class="video-placeholder">
+                                    <i class="fas fa-play-circle"></i>
+                                    <h3>Обзор прачечной</h3>
+                                    <p>Место для прикрепления видео</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="detail-sidebar">
+                        <div class="detail-card">
+                            <h3 class="detail-card__title">
+                                <i class="fas fa-building"></i>
+                                Другие помещения
+                            </h3>
+                            <ul class="related-links">
+                                <li><a href="detail-kuhni.html">Кухни</a></li>
+                                <li><a href="detail-kinosal.html">Кинозал</a></li>
+                                <li><a href="detail-ucheba.html">Учебные пространства</a></li>
+                                <li><a href="detail-storage.html">Камеры хранения</a></li>
+                                <li><a href="infrastructure.html" class="back-link">Вернуться к инфраструктуре</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-card">
+                            <h3 class="detail-card__title">
+                                <i class="fas fa-question-circle"></i>
+                                Нужна помощь?
+                            </h3>
+                            <p>Если у вас возникли вопросы по использованию прачечной, обратитесь к администратору общежития.</p>
+                            <a href="index.html#contacts" class="help-btn">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <p>&copy; 2024 Общежитие №2 МГИМО. Информационный гид для первокурсников.</p>
+                </div>
+                <div class="footer__links">
+                    <a href="index.html#home">Главная</a>
+                    <a href="infrastructure.html">Инфраструктура</a>
+                    <a href="index.html#contacts">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Прокрутка для ссылок location-link
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.location-link');
+            
+            links.forEach(function(link) {
+                link.onclick = function(e) {
+                    e.preventDefault();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const header = document.querySelector('.header');
+                        const headerHeight = header ? header.offsetHeight : 80;
+                        const targetPosition = target.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                };
+            });
+        });
+    </script>
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.classList.contains('animated-list')) {
+                        const items = entry.target.querySelectorAll('.bedding-item');
+                        items.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('visible');
+                            }, index * 100);
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.fade-in, .equipment-item, .detail-info-item, .animated-list, .bedding-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест прокрутки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+        .content {
+            margin-top: 100px;
+            padding: 20px;
+        }
+        .section {
+            height: 300px;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+        #instructions {
+            background: #e8f5e8;
+            border: 2px solid #4CAF50;
+        }
+        .location-link {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .location-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Тест прокрутки</h1>
+    </div>
+    
+    <div class="content">
+        <div class="section">
+            <h2>Секция 1</h2>
+            <p>Это первая секция для тестирования прокрутки.</p>
+            <a href="#instructions" class="location-link">Перейти к инструкциям</a>
+        </div>
+        
+        <div class="section">
+            <h2>Секция 2</h2>
+            <p>Это вторая секция.</p>
+        </div>
+        
+        <div class="section" id="instructions">
+            <h2>Как найти прачечную?</h2>
+            <ol>
+                <li>Спуститесь на первый этаж</li>
+                <li>Сверните в коридор справа от лифтов</li>
+                <li>Спуститесь по лестнице</li>
+                <li>Пройдите до большого холла</li>
+                <li>Сверните в левый коридор и идите до конца</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>Секция 4</h2>
+            <p>Это четвертая секция.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const locationLinks = document.querySelectorAll('.location-link');
+            locationLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    const target = document.querySelector(href);
+                    if (target) {
+                        // Получаем высоту хедера
+                        const header = document.querySelector('.header');
+                        const headerHeight = header ? header.offsetHeight : 80;
+                        
+                        // Вычисляем позицию с отступом
+                        const targetPosition = target.offsetTop - headerHeight - 20;
+                        
+                        console.log('Scrolling to:', targetPosition);
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

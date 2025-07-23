@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инфраструктура - Общежитие №2 МГИМО</title>
+    <meta name="description" content="Инфраструктура района и общежития №2 МГИМО - планы этажей, общие помещения и технические возможности">
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
+    <link rel="stylesheet" href="assets/css/animations.css?v=4">
+    <link rel="stylesheet" href="assets/css/infrastructure.css?v=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="index.html#home" class="nav__logo">
+                    <img src="assets/images/logo.svg" alt="МГИМО" class="nav__logo-img">
+                    <span>Общежитие №2</span>
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html#home" class="nav__link">Главная</a></li>
+                    <li><a href="index.html#contacts" class="nav__link">Контакты</a></li>
+                    <li><a href="index.html#location" class="nav__link">Адреса</a></li>
+                    <li><a href="#infrastructure" class="nav__link nav__link--active">Инфраструктура</a></li>
+                    <li><a href="index.html#rules" class="nav__link">Правила</a></li>
+                    <li><a href="index.html#student-council" class="nav__link">Студсовет</a></li>
+                    <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <div class="nav__lang nav__lang--mobile">
+                    <div class="lang-toggle" data-lang="ru" id="lang-toggle-mobile">
+                        <div class="lang-toggle__slider"></div>
+                        <div class="lang-toggle__labels">
+                            <span class="lang-toggle__label lang-toggle__label--ru">RU</span>
+                            <span class="lang-toggle__label lang-toggle__label--en">EN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav__lang">
+                <div class="lang-toggle" data-lang="ru" id="lang-toggle">
+                    <div class="lang-toggle__slider"></div>
+                    <div class="lang-toggle__labels">
+                        <span class="lang-toggle__label lang-toggle__label--ru">RU</span>
+                        <span class="lang-toggle__label lang-toggle__label--en">EN</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Infrastructure Hero Section -->
+        <section class="infrastructure-hero section" id="infrastructure">
+            <div class="container">
+                <div class="infrastructure-hero__content">
+                    <h1 class="infrastructure-hero__title">
+                        <span class="gradient-text">Инфраструктура</span>
+                    </h1>
+                    <p class="infrastructure-hero__description">
+                        Полная информация об инфраструктуре района и общежития №2 МГИМО
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infrastructure Content -->
+        <section class="infrastructure-content section">
+            <div class="container">
+                <!-- Tabs Navigation -->
+                <div class="infrastructure-tabs">
+                    <div class="infrastructure-tabs__nav">
+                        <button class="infrastructure-tab active" data-tab="district">
+                            <i class="fas fa-city"></i>
+                            <span>Инфраструктура района</span>
+                        </button>
+                        <button class="infrastructure-tab" data-tab="dormitory">
+                            <i class="fas fa-building"></i>
+                            <span>Инфраструктура общежития</span>
+                        </button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="infrastructure-tabs__content">
+                        <!-- District Infrastructure -->
+                        <div class="infrastructure-tab-content active" id="district-content">
+                            <div class="infrastructure-grid">
+                                <!-- Продуктовые магазины -->
+                                <div class="infrastructure-card animate-slide-up">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Продуктовые магазины</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Пятёрочка, Вкусвилл, Ярче!, Да!</h4>
+                                                <p>Ближайшие магазины в 15-20 минутах ходьбы</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Лента, Перекрёсток</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-groceries.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Транспорт -->
+                                <div class="infrastructure-card animate-slide-up delay-1">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-subway"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Транспорт</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Метро "Проспект Вернадского" и "Юго-Западная"</h4>
+                                                <p>15-20 минут пешком или на автобусах</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Автобусы 616, 688, т34, 224, с17, 667</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-transport.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Пункты выдачи -->
+                                <div class="infrastructure-card animate-slide-up delay-2">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-box"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Пункты выдачи</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Озон, Вайлберриз, Яндекс.Маркет</h4>
+                                                <p>Получение посылок и заказов</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Почта России</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-delivery.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Медицина -->
+                                <div class="infrastructure-card animate-slide-up delay-3">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Медицина</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Поликлиника МГИМО</h4>
+                                                <p>Бесплатная медицинская помощь</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Городская поликлиника №8, аптеки</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-medicine.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Спорт и отдых -->
+                                <div class="infrastructure-card animate-slide-up delay-4">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-dumbbell"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Спорт и отдых</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Олимпийская деревня</h4>
+                                                <p>Спортивный комплекс с бассейном</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Парк с площадками и прудом</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-sport.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Торговые центры -->
+                                <div class="infrastructure-card animate-slide-up delay-5">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-store"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Торговые центры</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>ТЦ у Олимпийской деревни</h4>
+                                                <p>Множество магазинов в одном месте</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>FixPrice, хозяйственные товары</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-shopping.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Кафе и рестораны -->
+                                <div class="infrastructure-card animate-slide-up delay-6">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-utensils"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Кафе и рестораны</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Бургер Кинг</h4>
+                                                <p>Работает почти круглосуточно</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Разные кухни мира</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-food.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- МФЦ и услуги -->
+                                <div class="infrastructure-card animate-slide-up delay-7">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-id-card"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">МФЦ и услуги</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Многофункциональные центры</h4>
+                                                <p>Социальная карта и документы</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Книжный магазин "Лабиринт"</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-services.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dormitory Infrastructure -->
+                        <div class="infrastructure-tab-content" id="dormitory-content">
+                            <div class="infrastructure-grid">
+                                <!-- Прачечная -->
+                                <div class="infrastructure-card animate-slide-up">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-tshirt"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Прачечная</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Полный набор услуг прачечной</h4>
+                                                <p>Стирка, глажка, смена белья</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Удобная запись через Roscampus</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-prachehnaya.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Кухни -->
+                                <div class="infrastructure-card animate-slide-up delay-1">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-utensils"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Кухни</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Кухонные зоны расположены на всех жилых этажах</h4>
+                                                <p>Кроме 2-го</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Есть все необходимое</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-kitchen.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Кинозал -->
+                                <div class="infrastructure-card animate-slide-up delay-2">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-film"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Кинозал</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Просмотр фильмов</h4>
+                                                <p>Яркие, запоминающиеся вечера в кругу друзей</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Настольные игры, праздничные мероприятия</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-kinosal.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Читальный зал -->
+                                <div class="infrastructure-card animate-slide-up delay-3">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-book-open"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Читальный зал</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Тихая зона для учебы</h4>
+                                                <p>4 этаж, работает до 23:00</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Wi-Fi и розетки</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-reading.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Коворкинг -->
+                                <div class="infrastructure-card animate-slide-up delay-4">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-laptop"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Коворкинг</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Современное рабочее пространство</h4>
+                                                <p>5 этаж, комфортная атмосфера</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>Идеально для групповых проектов</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-coworking.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Dormemory -->
+                                <div class="infrastructure-card animate-slide-up delay-5">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-history"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Dormemory</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Музей истории общежития</h4>
+                                                <p>Статуэтки, сувениры, фотографии</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>История студенческих годов</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-dormemory.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+                                <!-- Камера хранения -->
+                                <div class="infrastructure-card animate-slide-up delay-6">
+                                    <div class="infrastructure-card__icon">
+                                        <i class="fas fa-box"></i>
+                                    </div>
+                                    <h3 class="infrastructure-card__title">Камера хранения</h3>
+                                    <div class="service-highlight">
+                                        <div class="service-highlight__main">
+                                            <div class="service-highlight__text">
+                                                <h4>Хранение вещей и чемоданов</h4>
+                                                <p>2 этаж, доступ в рабочее время</p>
+                                            </div>
+                                        </div>
+                                        <div class="service-highlight__feature">
+                                            <div class="service-highlight__text">
+                                                <h4>По запросу у администратора</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="detail-storage.html" class="infrastructure-card__btn">Подробнее</a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <p>&copy; 2024 Общежитие №2 МГИМО. Информационный гид для первокурсников.</p>
+                </div>
+                <div class="footer__links">
+                    <a href="index.html#home">Главная</a>
+                    <a href="index.html#contacts">Контакты</a>
+                    <a href="#infrastructure">Инфраструктура</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lang-switcher.js"></script>
+    <script src="assets/js/infrastructure-simple.js?v=1"></script>
+    
+    <!-- Временный inline скрипт для тестирования -->
+    <script>
+        // Дополнительная проверка после загрузки всех скриптов
+        setTimeout(function() {
+            console.log('Testing tabs after delay...');
+            const tabs = document.querySelectorAll('.infrastructure-tab');
+            const contents = document.querySelectorAll('.infrastructure-tab-content');
+            
+            console.log('Found tabs:', tabs.length);
+            console.log('Found contents:', contents.length);
+            
+            // Если основной скрипт не сработал, добавляем обработчики здесь
+            if (tabs.length > 0 && !tabs[0].onclick) {
+                console.log('Adding click handlers manually...');
+                
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function() {
+                        const tabName = this.getAttribute('data-tab');
+                        console.log('Manual handler - Tab clicked:', tabName);
+                        
+                        // Убираем active у всех
+                        tabs.forEach(t => t.classList.remove('active'));
+                        contents.forEach(c => {
+                            c.classList.remove('active');
+                            c.style.display = 'none';
+                        });
+                        
+                        // Добавляем active нужным
+                        this.classList.add('active');
+                        const content = document.getElementById(tabName + '-content');
+                        if (content) {
+                            content.style.display = 'block';
+                            setTimeout(() => content.classList.add('active'), 10);
+                        }
+                    });
+                });
+            }
+        }, 1000);
+    </script>
+</body>
+</html> 

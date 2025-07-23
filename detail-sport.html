@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спорт и отдых - Общежитие №2 МГИМО</title>
+    <meta name="description" content="Подробная информация о спортивных объектах и местах отдыха рядом с общежитием №2 МГИМО">
+    <link rel="stylesheet" href="assets/css/style.css?v=8">
+    <link rel="stylesheet" href="assets/css/infrastructure.css?v=4">
+    <link rel="stylesheet" href="assets/css/detail.css?v=9">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        #instructions {
+            scroll-margin-top: 120px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="index.html#home" class="nav__logo">
+                    <img src="assets/images/logo.svg" alt="МГИМО" class="nav__logo-img">
+                    <span>Общежитие №2</span>
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html#home" class="nav__link">Главная</a></li>
+                    <li><a href="index.html#contacts" class="nav__link">Контакты</a></li>
+                    <li><a href="index.html#location" class="nav__link">Адреса</a></li>
+                    <li><a href="infrastructure.html" class="nav__link">Инфраструктура</a></li>
+                    <li><a href="index.html#rules" class="nav__link">Правила</a></li>
+                    <li><a href="index.html#student-council" class="nav__link">Студсовет</a></li>
+                    <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Detail Hero Section -->
+        <section class="detail-hero section">
+            <div class="container">
+                <div class="detail-hero__content">
+                    <div class="detail-hero__breadcrumb">
+                        <a href="infrastructure.html">Инфраструктура района</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Спорт и отдых</span>
+                    </div>
+                    <h1 class="detail-hero__title">
+                        <i class="fas fa-dumbbell"></i>
+                        Спорт и отдых
+                    </h1>
+                    <p class="detail-hero__description">
+                        Спортивные комплексы, бассейн и парки для активного отдыха рядом с общежитием
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detail Content -->
+        <section class="detail-content section">
+            <div class="container">
+                <div class="detail-grid">
+                    <!-- Main Info -->
+                    <div class="detail-main">
+                        <!-- Basic Info -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-info-circle"></i>
+                                Основная информация
+                            </h2>
+                            <div class="detail-info-grid">
+                                <div class="detail-info-item">
+                                    <div class="detail-info-item__icon">
+                                        <i class="fas fa-swimming-pool"></i>
+                                    </div>
+                                    <div class="detail-info-item__content">
+                                        <h3>Олимпийская деревня</h3>
+                                        <p>Спортивный комплекс с бассейном</p>
+                                        <span class="detail-info-item__note">Основной спортивный объект</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-info-item">
+                                    <div class="detail-info-item__icon">
+                                        <i class="fas fa-tree"></i>
+                                    </div>
+                                    <div class="detail-info-item__content">
+                                        <h3>Парк</h3>
+                                        <p>С площадками и прудом</p>
+                                        <span class="detail-info-item__note">
+                                            <a href="#instructions" class="location-link">
+                                                Как найти?
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-info-item">
+                                    <div class="detail-info-item__icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="detail-info-item__content">
+                                        <h3>Время работы</h3>
+                                        <p>Уточняйте на сайтах объектов</p>
+                                        <span class="detail-info-item__note">
+                                            <a href="#facilities" class="location-link">
+                                                Список объектов
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sports Facilities -->
+                        <div class="detail-card" id="facilities">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-running"></i>
+                                Спортивные объекты
+                            </h2>
+                            <div class="equipment-grid">
+                                <div class="equipment-item">
+                                    <i class="fas fa-swimming-pool" style="color: #6B46C1;"></i>
+                                    <h3>Олимпийская деревня</h3>
+                                    <p>Спортивный комплекс с бассейном</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-tree"></i>
+                                    <h3>Парк</h3>
+                                    <p>Спортивные площадки и пруд</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-basketball-ball" style="color: #6B46C1;"></i>
+                                    <h3>Спортивные площадки</h3>
+                                    <p>В парке и на территории</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-walking"></i>
+                                    <h3>Пешеходные дорожки</h3>
+                                    <p>Для прогулок и бега</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activities -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-heart"></i>
+                                Виды активности
+                            </h2>
+                            <div class="equipment-grid">
+                                <div class="equipment-item">
+                                    <i class="fas fa-swimming-pool" style="color: #6B46C1;"></i>
+                                    <h3>Плавание</h3>
+                                    <p>Бассейн в Олимпийской деревне</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-running"></i>
+                                    <h3>Бег</h3>
+                                    <p>По дорожкам парка</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-basketball-ball" style="color: #6B46C1;"></i>
+                                    <h3>Игровые виды спорта</h3>
+                                    <p>На спортивных площадках</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-dumbbell"></i>
+                                    <h3>Фитнес</h3>
+                                    <p>В спортивном комплексе</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <i class="fas fa-fish" style="color: #6B46C1;"></i>
+                                    <h3>Отдых у пруда</h3>
+                                    <p>Спокойный отдых в парке</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Photos Section -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-images"></i>
+                                Фотографии
+                            </h2>
+                            <div class="photo-grid">
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Место для фото Олимпийской деревни</p>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Место для фото парка с прудом</p>
+                                </div>
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Место для фото спортивных площадок</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Section -->
+                        <div class="detail-card">
+                            <h2 class="detail-card__title">
+                                <i class="fas fa-video"></i>
+                                Видео
+                            </h2>
+                            <div class="video-container">
+                                <div class="video-placeholder">
+                                    <i class="fas fa-play-circle"></i>
+                                    <h3>Спортивные объекты района</h3>
+                                    <p>Место для прикрепления видео</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="detail-sidebar">
+                        <div class="detail-card">
+                            <h3 class="detail-card__title">
+                                <i class="fas fa-map-marked-alt"></i>
+                                Другие места района
+                            </h3>
+                            <ul class="related-links">
+                                <li><a href="detail-groceries.html">Продуктовые магазины</a></li>
+                                <li><a href="detail-transport.html">Транспорт</a></li>
+                                <li><a href="detail-delivery.html">Пункты выдачи</a></li>
+                                <li><a href="detail-medicine.html">Медицина</a></li>
+                                <li><a href="detail-shopping.html">Торговые центры</a></li>
+                                <li><a href="detail-food.html">Кафе и рестораны</a></li>
+                                <li><a href="detail-services.html">МФЦ и услуги</a></li>
+                                <li><a href="infrastructure.html" class="back-link">Вернуться к инфраструктуре</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-card">
+                            <h3 class="detail-card__title">
+                                <i class="fas fa-question-circle"></i>
+                                Нужна помощь?
+                            </h3>
+                            <p>Если у вас возникли вопросы по спортивным объектам, обратитесь к студсовету или администратору общежития.</p>
+                            <a href="index.html#contacts" class="help-btn">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <p>&copy; 2024 Общежитие №2 МГИМО. Информационный гид для первокурсников.</p>
+                </div>
+                <div class="footer__links">
+                    <a href="index.html#home">Главная</a>
+                    <a href="infrastructure.html">Инфраструктура</a>
+                    <a href="index.html#contacts">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Прокрутка для ссылок location-link - выполняется ДО main.js
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.location-link');
+            
+            links.forEach(function(link) {
+                link.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const header = document.querySelector('.header');
+                        const headerHeight = header ? header.offsetHeight : 80;
+                        const targetPosition = target.offsetTop - headerHeight - 40;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                };
+            });
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.classList.contains('animated-list')) {
+                        const items = entry.target.querySelectorAll('.bedding-item');
+                        items.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('visible');
+                            }, index * 100);
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.fade-in, .equipment-item, .detail-info-item, .animated-list, .bedding-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запуск сайта - Общежитие №2 МГИМО</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #FFD700 0%, #6B46C1 100%);
+            border-radius: 1rem;
+            color: white;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #FFD700 0%, #6B46C1 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            margin: 0.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid #e5e5e5;
+            border-radius: 0.5rem;
+        }
+        .code {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .status {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        .status.ready {
+            background: #10B981;
+            color: white;
+        }
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+        .checklist li:before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏠 Сайт Общежития №2 МГИМО</h1>
+        <p>Современный информационный сайт-гайд для первокурсников</p>
+        <span class="status ready">Готов к демонстрации</span>
+    </div>
+
+    <div class="section">
+        <h2>🚀 Быстрый запуск</h2>
+        <p>Для просмотра сайта просто откройте файл <strong>index.html</strong> в браузере:</p>
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="index.html" class="btn">🌐 Открыть сайт</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>💻 Локальный сервер (рекомендуется)</h2>
+        <p>Для полной функциональности рекомендуется запустить локальный сервер:</p>
+        
+        <h3>Python:</h3>
+        <div class="code">python -m http.server 8000</div>
+        
+        <h3>Node.js:</h3>
+        <div class="code">npx http-server</div>
+        
+        <h3>PHP:</h3>
+        <div class="code">php -S localhost:8000</div>
+        
+        <p>После запуска откройте <code>http://localhost:8000</code> в браузере.</p>
+    </div>
+
+    <div class="section">
+        <h2>✅ Реализованная функциональность</h2>
+        <ul class="checklist">
+            <li>Адаптивный дизайн для всех устройств</li>
+            <li>Анимации при скролле и hover-эффекты</li>
+            <li>Многоязычность (Русский/English)</li>
+            <li>Интерактивное FAQ с категориями</li>
+            <li>Форма обратной связи с валидацией</li>
+            <li>Мобильная навигация</li>
+            <li>Система уведомлений</li>
+            <li>Прогресс-бар скролла</li>
+            <li>Доступность (accessibility)</li>
+            <li>SEO-оптимизация</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🎨 Дизайн</h2>
+        <p><strong>Цветовая схема:</strong> Желтый (#FFD700) и фиолетовый (#6B46C1) с градиентами</p>
+        <p><strong>Типографика:</strong> Inter, современные размеры</p>
+        <p><strong>Стиль:</strong> Молодежный, современный, минималистичный</p>
+    </div>
+
+    <div class="section">
+        <h2>📱 Тестирование</h2>
+        <p>Сайт протестирован на:</p>
+        <ul>
+            <li>Десктоп (1200px+)</li>
+            <li>Планшет (768px - 1199px)</li>
+            <li>Мобильные устройства (до 767px)</li>
+        </ul>
+        
+        <p><strong>Функции для тестирования:</strong></p>
+        <ul>
+            <li>Переключение языков (RU/EN в шапке)</li>
+            <li>Мобильное меню (гамбургер)</li>
+            <li>FAQ (клик по вопросам, фильтрация)</li>
+            <li>Форма обратной связи</li>
+            <li>Плавная прокрутка по якорям</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🔧 Техническая информация</h2>
+        <p><strong>Технологии:</strong> HTML5, CSS3, JavaScript ES6+</p>
+        <p><strong>Браузеры:</strong> Chrome, Firefox, Safari, Edge</p>
+        <p><strong>Размер:</strong> ~50KB (без изображений)</p>
+        <p><strong>Зависимости:</strong> Font Awesome, Google Fonts</p>
+    </div>
+
+    <div class="section">
+        <h2>📞 Контакты</h2>
+        <p><strong>Email:</strong> dorm2@mgimo.ru</p>
+        <p><strong>Telegram:</strong> @dorm2_mgimo</p>
+        <p><strong>Домен:</strong> dorm2.mgimo.ru (для продакшн)</p>
+    </div>
+
+    <div style="text-align: center; margin: 3rem 0;">
+        <a href="index.html" class="btn">🏠 Перейти на главную страницу</a>
+    </div>
+
+    <script>
+        // Простая анимация для демонстрации
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.style.opacity = '0';
+                    section.style.transform = 'translateY(20px)';
+                    section.style.transition = 'all 0.6s ease';
+                    
+                    setTimeout(() => {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 150);
+            });
+        });
+    </script>
+</body>
+</html> 

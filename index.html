@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Общежитие №2 МГИМО - Гид для первокурсников</title>
+    <meta name="description" content="Информационный сайт-гайд для первокурсников МГИМО, заселяющихся в общежитие №2">
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
+    <link rel="stylesheet" href="assets/css/animations.css?v=4">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="#home" class="nav__logo">
+                    <img src="assets/images/logo.svg" alt="МГИМО" class="nav__logo-img">
+                    <span>Общежитие №2</span>
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#contacts" class="nav__link" data-translate="nav-contacts">Контакты</a></li>
+                    <li><a href="#location" class="nav__link" data-translate="nav-location">Адреса</a></li>
+                    <li><a href="infrastructure.html" class="nav__link" data-translate="nav-infrastructure">Инфраструктура</a></li>
+                    <li><a href="#rules" class="nav__link" data-translate="nav-rules">Правила</a></li>
+                    <li><a href="#student-council" class="nav__link" data-translate="nav-student-council">Студсовет</a></li>
+                    <li><a href="#faq" class="nav__link" data-translate="nav-faq">FAQ</a></li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <div class="nav__lang nav__lang--mobile">
+                    <div class="lang-toggle" data-lang="ru" id="lang-toggle-mobile">
+                        <div class="lang-toggle__slider"></div>
+                        <div class="lang-toggle__labels">
+                            <span class="lang-toggle__label lang-toggle__label--ru">RU</span>
+                            <span class="lang-toggle__label lang-toggle__label--en">EN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav__lang">
+                <div class="lang-toggle" data-lang="ru" id="lang-toggle">
+                    <div class="lang-toggle__slider"></div>
+                    <div class="lang-toggle__labels">
+                        <span class="lang-toggle__label lang-toggle__label--ru">RU</span>
+                        <span class="lang-toggle__label lang-toggle__label--en">EN</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Home Section -->
+        <section class="home section" id="home">
+            <div class="home__container container">
+                <div class="home__data">
+                    <h1 class="home__title animate-fade-up">
+                        <span data-translate="home-title">Добро пожаловать в</span> <br>
+                        <span class="gradient-text" data-translate="home-title-highlight">Общежитие №2 МГИМО</span>
+                    </h1>
+                    <p class="home__description animate-fade-up delay-1" data-translate="home-description">
+                        Полный гид для первокурсников МГИМО по заселению и комфортному проживанию в общежитии
+                    </p>
+                    <div class="home__buttons animate-fade-up delay-2">
+                        <a href="#quick-guide" class="btn btn-custom btn-guide" style="width: 195px !important; max-width: 195px !important; min-width: 195px !important; padding: 0.75rem 2rem !important; font-size: 1rem !important; font-weight: 500 !important; box-sizing: border-box !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; transform: none !important; position: relative !important; overflow: hidden !important; background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%) !important; border: 2px solid #000000 !important; color: white !important;">
+                            <i class="fas fa-book-open"></i>
+                            <span data-translate="btn-quick-guide">Быстрый гид</span>
+                        </a>
+                        <a href="#contacts" class="btn btn-custom btn-contacts" style="background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%) !important; border: 2px solid #000000 !important; width: 195px !important; max-width: 195px !important; min-width: 195px !important; padding: 0.75rem 2rem !important; font-size: 1rem !important; font-weight: 500 !important; box-sizing: border-box !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; transform: none !important; position: relative !important; overflow: hidden !important; color: white !important;">
+                            <i class="fas fa-phone"></i>
+                            <span data-translate="btn-contacts">Контакты</span>
+                        </a>
+                    </div>
+                    <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+                        <div style="width: 195px;">
+                            <a href="https://t.me/dorm2_mgimo" class="btn btn-custom btn-telegram" style="background: linear-gradient(135deg, #00BFFF 0%, #1E90FF 50%, #0066FF 100%) !important; border: 2px solid #0066FF !important; width: 195px !important; max-width: 195px !important; min-width: 195px !important; padding: 0.75rem 2rem !important; font-size: 1rem !important; font-weight: 500 !important; box-sizing: border-box !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; transform: none !important; position: relative !important; overflow: hidden !important; color: white !important;" target="_blank">
+                                <i class="fab fa-telegram"></i>
+                                <span data-translate="telegram-link">TG-канал</span>
+                            </a>
+                        </div>
+                        <div style="width: 195px;">
+                            <a href="#student-council" class="btn btn-custom btn-council" style="background: linear-gradient(135deg, #9333EA 0%, #7E22CE 100%) !important; border: 2px solid #7E22CE !important; width: 195px !important; max-width: 195px !important; min-width: 195px !important; padding: 0.75rem 2rem !important; font-size: 1rem !important; font-weight: 500 !important; box-sizing: border-box !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; transform: none !important; position: relative !important; overflow: hidden !important; color: white !important;">
+                                <i class="fas fa-users"></i>
+                                <span>Студсовет</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <style>
+                    /* Плавная прокрутка для всех якорных ссылок */
+                    html {
+                        scroll-behavior: smooth;
+                    }
+                    
+                    /* Индивидуальная анимация для каждой кнопки */
+                    .btn-custom::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -100%;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+                        transition: left 0.5s ease;
+                        z-index: 1;
+                        opacity: 0;
+                    }
+
+                    .btn-guide:hover::before,
+                    .btn-contacts:hover::before,
+                    .btn-telegram:hover::before,
+                    .btn-council:hover::before {
+                        left: 100%;
+                        opacity: 1;
+                    }
+
+                    .btn-custom:hover {
+                        transform: none !important;
+                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4) !important;
+                    }
+
+                    .btn-contacts:hover {
+                        color: white !important;
+                    }
+
+                    .btn-custom > *,
+                    .btn-custom i,
+                    .btn-custom span {
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                    /* Уникальные анимации для каждой кнопки */
+                    
+                    /* Кнопка "Быстрый гид" - пульсация границы */
+                    .btn-guide {
+                        position: relative;
+                        overflow: visible !important;
+                    }
+
+                    .btn-guide::after {
+                        content: '';
+                        position: absolute;
+                        top: -3px;
+                        left: -3px;
+                        right: -3px;
+                        bottom: -3px;
+                        border-radius: 12px;
+                        border: 2px solid transparent;
+                        background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700) border-box;
+                        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+                        -webkit-mask-composite: destination-out;
+                        mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+                        mask-composite: exclude;
+                        opacity: 0;
+                        animation: pulse-border 2s ease-in-out infinite;
+                    }
+
+                    .btn-guide:hover::after {
+                        opacity: 1;
+                        animation: pulse-border-fast 1s ease-in-out infinite;
+                    }
+
+                    @keyframes pulse-border {
+                        0%, 100% { transform: scale(1); opacity: 0.7; }
+                        50% { transform: scale(1.05); opacity: 1; }
+                    }
+
+                    @keyframes pulse-border-fast {
+                        0%, 100% { transform: scale(1); opacity: 0.8; }
+                        50% { transform: scale(1.03); opacity: 1; }
+                    }
+
+                    /* Кнопка "Контакты" */
+                    .btn-contacts {
+                        position: relative;
+                    }
+
+                    /* Кнопка TG-канал - яркий голубой */
+                    .btn-telegram {
+                        position: relative;
+                    }
+
+                    /* Кнопка Студсовет - градиентное перетекание */
+                    .btn-council {
+                        position: relative;
+                        background-size: 300% 300% !important;
+                        animation: gradient-shift 4s ease infinite;
+                    }
+
+                    .btn-council:hover {
+                        animation: gradient-shift-fast 2s ease infinite;
+                    }
+
+                    @keyframes gradient-shift {
+                        0% { background-position: 0% 50%; }
+                        50% { background-position: 100% 50%; }
+                        100% { background-position: 0% 50%; }
+                    }
+
+                    @keyframes gradient-shift-fast {
+                        0% { background-position: 0% 50%; }
+                        50% { background-position: 100% 50%; }
+                        100% { background-position: 0% 50%; }
+                    }
+
+                    /* Дополнительные эффекты для иконок */
+                    .btn-guide:hover i {
+                        animation: bounce-icon 0.6s ease-in-out;
+                    }
+
+                    .btn-contacts:hover i {
+                        animation: shake-icon 0.8s ease-in-out;
+                    }
+
+                    .btn-telegram:hover i {
+                        animation: rotate-icon 0.8s ease-in-out;
+                    }
+
+                    .btn-council:hover i {
+                        animation: pulse-icon 0.6s ease-in-out;
+                    }
+
+                    @keyframes bounce-icon {
+                        0%, 100% { transform: translateY(0); }
+                        50% { transform: translateY(-5px); }
+                    }
+
+                    @keyframes shake-icon {
+                        0%, 100% { transform: translateX(0); }
+                        25% { transform: translateX(-3px); }
+                        75% { transform: translateX(3px); }
+                    }
+
+                    @keyframes rotate-icon {
+                        0% { transform: rotate(0deg); }
+                        100% { transform: rotate(360deg); }
+                    }
+
+                    @keyframes pulse-icon {
+                        0%, 100% { transform: scale(1); }
+                        50% { transform: scale(1.2); }
+                    }
+
+                    /* Стили для новых контактных карточек */
+                    .contacts__main-grid {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: var(--spacing-2xl);
+                        margin-bottom: var(--spacing-3xl);
+                    }
+
+                    .contact-category-card {
+                        background: var(--white);
+                        border-radius: var(--radius-xl);
+                        box-shadow: var(--shadow-md);
+                        overflow: hidden;
+                        transition: var(--transition-base);
+                        position: relative;
+                    }
+
+                    .contact-category-card::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 4px;
+                        background: var(--gradient-main);
+                    }
+
+                    .contact-category-card:hover {
+                        transform: translateY(-8px) scale(1.02);
+                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+                    }
+
+                    /* Анимация иконок при hover */
+                    .contact-category-card:hover .contact-category-card__icon {
+                        transform: rotate(360deg) scale(1.1);
+                        background: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFD700 100%);
+                        color: #FFFFFF;
+                        box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+                    }
+
+                    .contact-category-card__icon {
+                        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                    }
+
+                    /* Анимация содержимого при hover */
+                    .contact-category-card:hover .contact-category-card__content {
+                        transform: translateY(-3px);
+                    }
+
+                    .contact-category-card__content {
+                        transition: transform 0.4s ease;
+                    }
+
+                    /* Пульсация градиентной полоски */
+                    .contact-category-card::before {
+                        transition: all 0.4s ease;
+                    }
+
+                    .contact-category-card:hover::before {
+                        height: 6px;
+                        box-shadow: 0 0 15px rgba(107, 70, 193, 0.5);
+                    }
+
+                    /* Анимация заголовка */
+                    .contact-category-card:hover .contact-category-card__header h3 {
+                        color: var(--primary-purple);
+                        transform: translateX(5px);
+                    }
+
+                    .contact-category-card__header h3 {
+                        transition: all 0.3s ease;
+                    }
+
+                    .contact-category-card__header {
+                        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                        padding: var(--spacing-xl);
+                        display: flex;
+                        align-items: center;
+                        gap: var(--spacing-md);
+                    }
+
+                    .contact-category-card__icon {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background: linear-gradient(135deg, #FFE55C 0%, #FFA500 100%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: var(--font-size-xl);
+                        color: #6B46C1;
+                        box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+                    }
+
+                    .contact-category-card__header h3 {
+                        color: var(--gray-900);
+                        margin: 0;
+                        font-size: var(--font-size-lg);
+                        font-weight: 600;
+                    }
+
+                    .contact-category-card__content {
+                        padding: var(--spacing-xl);
+                    }
+
+                    .contact-item {
+                        display: flex;
+                        align-items: center;
+                        gap: var(--spacing-sm);
+                        margin-bottom: var(--spacing-md);
+                        padding: var(--spacing-sm);
+                        border-radius: var(--radius-md);
+                        transition: var(--transition-base);
+                    }
+
+                    .contact-item:hover {
+                        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                        transform: translateX(8px);
+                        border-left: 3px solid var(--primary-purple);
+                    }
+
+                    /* Анимация иконок в contact-item */
+                    .contact-item:hover i {
+                        transform: scale(1.2);
+                        color: #FF6B35;
+                    }
+
+                    .contact-item i {
+                        transition: all 0.3s ease;
+                    }
+
+                    /* Анимация текста в contact-item */
+                    .contact-item:hover span {
+                        font-weight: 600;
+                        color: var(--gray-900);
+                    }
+
+                    .contact-item span {
+                        transition: all 0.3s ease;
+                    }
+
+                    .contact-item:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .contact-item i {
+                        color: #8B5CF6;
+                        width: 20px;
+                        text-align: center;
+                    }
+
+                    .contact-item span {
+                        color: var(--gray-700);
+                        font-weight: 500;
+                    }
+
+                    .contact-item-special {
+                        background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+                        padding: var(--spacing-md);
+                        border-radius: var(--radius-md);
+                        margin-top: var(--spacing-md);
+                    }
+
+                    .contact-special-label {
+                        display: block;
+                        font-size: var(--font-size-sm);
+                        font-weight: 600;
+                        color: var(--primary-purple);
+                        margin-bottom: var(--spacing-xs);
+                    }
+
+                    /* Экстренные службы */
+                    .emergency-services {
+                        margin-bottom: var(--spacing-3xl);
+                    }
+
+                    .emergency-services__title {
+                        text-align: center;
+                        color: var(--gray-900);
+                        margin-bottom: var(--spacing-2xl);
+                        font-size: var(--font-size-2xl);
+                    }
+
+                    .emergency-services__grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                        gap: var(--spacing-lg);
+                    }
+
+                    .emergency-item {
+                        background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+                        padding: var(--spacing-lg);
+                        border-radius: var(--radius-lg);
+                        display: flex;
+                        align-items: center;
+                        gap: var(--spacing-md);
+                        transition: var(--transition-base);
+                        border-left: 4px solid #ef4444;
+                    }
+
+                    .emergency-item:hover {
+                        transform: translateX(5px);
+                        box-shadow: var(--shadow-md);
+                    }
+
+                    .emergency-number {
+                        background: #ef4444;
+                        color: white;
+                        font-weight: 700;
+                        font-size: var(--font-size-lg);
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .emergency-item span {
+                        color: var(--gray-700);
+                        font-weight: 500;
+                    }
+
+
+
+                    /* Стили для компактных экстренных номеров */
+                    .emergency-numbers-compact {
+                        display: flex;
+                        flex-direction: column;
+                        gap: var(--spacing-sm);
+                    }
+
+                    .emergency-number-item {
+                        display: flex;
+                        align-items: center;
+                        gap: var(--spacing-sm);
+                        padding: var(--spacing-xs);
+                        border-radius: var(--radius-sm);
+                        transition: var(--transition-base);
+                    }
+
+                    .emergency-number-item:hover {
+                        background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+                        transform: translateX(5px) scale(1.02);
+                        border-left: 3px solid #ef4444;
+                    }
+
+                    /* Анимация номеров экстренных служб */
+                    .emergency-number-item:hover .number {
+                        transform: scale(1.1);
+                        box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+                    }
+
+                    .emergency-number-item .number {
+                        transition: all 0.3s ease;
+                    }
+
+                    /* Анимация для специального блока психологической помощи */
+                    .contact-item-special:hover {
+                        transform: scale(1.02);
+                        box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+                    }
+
+                    .contact-item-special {
+                        transition: all 0.3s ease;
+                    }
+
+
+
+                    .emergency-number-item .number {
+                        background: #ef4444;
+                        color: white;
+                        font-weight: 700;
+                        font-size: var(--font-size-sm);
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-shrink: 0;
+                    }
+
+                    .emergency-number-item .label {
+                        color: var(--gray-700);
+                        font-size: var(--font-size-sm);
+                        font-weight: 500;
+                    }
+
+                    /* Адаптивность */
+                    @media (max-width: 1024px) {
+                        .contacts__main-grid {
+                            grid-template-columns: repeat(2, 1fr);
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .contacts__main-grid {
+                            grid-template-columns: 1fr;
+                        }
+                        
+                        .emergency-services__grid {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                    </style>
+                </div>
+                <div class="home__image animate-fade-left">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <img src="assets/images/character.png" alt="Персонаж-гид общежития МГИМО" class="home__img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Guide Section -->
+        <section class="quick-guide section" id="quick-guide">
+            <div class="container">
+                <h2 class="section__title" data-translate="quick-guide-title">Быстрые ссылки</h2>
+                <p class="section__subtitle" data-translate="quick-guide-subtitle">Основная информация для новых жильцов</p>
+                
+                <div class="quick-guide__grid">
+                    <div class="quick-card animate-slide-up">
+                        <div class="quick-card__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Адрес и проезд</h3>
+                        <p>Точный адрес общежития, схемы проезда и парковочные места</p>
+                        <a href="#location" class="quick-card__link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="quick-card animate-slide-up delay-1">
+                        <div class="quick-card__icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Инфраструктура</h3>
+                        <p>Планы этажей, общие помещения и технические возможности</p>
+                        <a href="infrastructure.html" class="quick-card__link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="quick-card animate-slide-up delay-2">
+                        <div class="quick-card__icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3>Правила проживания</h3>
+                        <p>Документы для заселения и правила внутреннего распорядка</p>
+                        <a href="#rules" class="quick-card__link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="quick-card animate-slide-up delay-3">
+                        <div class="quick-card__icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Оплата</h3>
+                        <p>Тарифы, способы оплаты, льготы и скидки</p>
+                        <a href="#payment" class="quick-card__link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="quick-card animate-slide-up delay-4">
+                        <div class="quick-card__icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Студенческий совет</h3>
+                        <p>Состав совета, мероприятия и возможность вступления</p>
+                        <a href="#student-council" class="quick-card__link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="quick-card animate-slide-up delay-5">
+                        <div class="quick-card__icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>Часто задаваемые вопросы</h3>
+                        <p>Ответы на популярные вопросы первокурсников</p>
+                        <a href="#faq" class="quick-card__link">Подробнее <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts Section -->
+        <section class="contacts section" id="contacts">
+            <div class="container">
+                <h2 class="section__title" data-translate="contacts-title">Контакты</h2>
+                <p class="section__subtitle" data-translate="contacts-subtitle">Вся необходимая контактная информация</p>
+                
+                <!-- Контактные карточки - 6 блоков в 2 ряда по 3 -->
+                <div class="contacts__main-grid">
+                    <!-- 1. Адрес -->
+                    <div class="contact-category-card animate-slide-up">
+                        <div class="contact-category-card__header">
+                            <div class="contact-category-card__icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Адрес</h3>
+                        </div>
+                        <div class="contact-category-card__content">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>проспект Вернадского, 76, корп. 1</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-mail-bulk"></i>
+                                <span>Индекс: 119454</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Администрация общежития -->
+                    <div class="contact-category-card animate-slide-up delay-1">
+                        <div class="contact-category-card__header">
+                            <div class="contact-category-card__icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>Администрация общежития</h3>
+                        </div>
+                        <div class="contact-category-card__content">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+7 (495) 229-5490</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>dorm2@my.mgimo.ru</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>каб. 300</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Ночной администратор -->
+                    <div class="contact-category-card animate-slide-up delay-2">
+                        <div class="contact-category-card__header">
+                            <div class="contact-category-card__icon">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                            <h3>Ночной администратор</h3>
+                        </div>
+                        <div class="contact-category-card__content">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>каб. 108</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Визовый центр -->
+                    <div class="contact-category-card animate-slide-up delay-3">
+                        <div class="contact-category-card__header">
+                            <div class="contact-category-card__icon">
+                                <i class="fas fa-passport"></i>
+                            </div>
+                            <h3>Визовый центр</h3>
+                        </div>
+                        <div class="contact-category-card__content">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+7 (495) 234-5879</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>visa@inno.mgimo.ru</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>каб. а201 (Общежитие №1)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Медико-психологический центр -->
+                    <div class="contact-category-card animate-slide-up delay-4">
+                        <div class="contact-category-card__header">
+                            <div class="contact-category-card__icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Медико-психологический центр МГИМО</h3>
+                        </div>
+                        <div class="contact-category-card__content">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+7 (495) 434-9352</span>
+                            </div>
+                            <div class="contact-item-special">
+                                <span class="contact-special-label">Линия психологической помощи в Москве</span>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+7 495 051</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Другие полезные телефоны -->
+                    <div class="contact-category-card animate-slide-up delay-5">
+                        <div class="contact-category-card__header">
+                            <div class="contact-category-card__icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3>Другие полезные телефоны</h3>
+                        </div>
+                        <div class="contact-category-card__content">
+                            <div class="emergency-numbers-compact">
+                                <div class="emergency-number-item">
+                                    <span class="number">101</span>
+                                    <span class="label">Пожарная служба</span>
+                                </div>
+                                <div class="emergency-number-item">
+                                    <span class="number">102</span>
+                                    <span class="label">Полиция</span>
+                                </div>
+                                <div class="emergency-number-item">
+                                    <span class="number">103</span>
+                                    <span class="label">Скорая помощь</span>
+                                </div>
+                                <div class="emergency-number-item">
+                                    <span class="number">112</span>
+                                    <span class="label">Единый номер вызова экстренных служб</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form animate-fade-up delay-6">
+                    <h3>Обратная связь</h3>
+                    <form class="form" id="contact-form">
+                        <div class="form__group">
+                            <input type="text" class="form__input" id="name" required>
+                            <label for="name" class="form__label">Ваше имя</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" class="form__input" id="email" required>
+                            <label for="email" class="form__label">Email</label>
+                        </div>
+                        <div class="form__group">
+                            <textarea class="form__input form__textarea" id="message" required></textarea>
+                            <label for="message" class="form__label">Сообщение</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Отправить в Telegram
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq section" id="faq">
+            <div class="container">
+                <h2 class="section__title">Часто задаваемые вопросы</h2>
+                <p class="section__subtitle">Ответы на популярные вопросы первокурсников</p>
+                
+                <div class="faq__categories">
+                    <button class="faq__category-btn active" data-category="all">Все вопросы</button>
+                    <button class="faq__category-btn" data-category="settlement">Заселение</button>
+                    <button class="faq__category-btn" data-category="rules">Правила</button>
+                    <button class="faq__category-btn" data-category="payment">Оплата</button>
+                    <button class="faq__category-btn" data-category="facilities">Удобства</button>
+                    <button class="faq__category-btn" data-category="internet">Интернет</button>
+                </div>
+
+                <div class="faq__list">
+                    <div class="faq__item animate-fade-up" data-category="settlement">
+                        <div class="faq__question">
+                            <h3>Какие документы нужны для заселения?</h3>
+                            <i class="fas fa-plus faq__icon"></i>
+                        </div>
+                        <div class="faq__answer">
+                            <p>Для заселения необходимы: паспорт, справка о регистрации, медицинская справка, договор на проживание, справка о доходах (для льготников).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item animate-fade-up delay-1" data-category="rules">
+                        <div class="faq__question">
+                            <h3>Можно ли приводить гостей?</h3>
+                            <i class="fas fa-plus faq__icon"></i>
+                        </div>
+                        <div class="faq__answer">
+                            <p>Да, гости допускаются с 10:00 до 22:00 при наличии документа, удостоверяющего личность. Необходимо уведомить вахту.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item animate-fade-up delay-2" data-category="payment">
+                        <div class="faq__question">
+                            <h3>Как оплачивать проживание?</h3>
+                            <i class="fas fa-plus faq__icon"></i>
+                        </div>
+                        <div class="faq__answer">
+                            <p>Оплата производится ежемесячно до 10 числа. Доступны способы: банковский перевод, онлайн-платежи, касса общежития.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item animate-fade-up delay-3" data-category="facilities">
+                        <div class="faq__question">
+                            <h3>Какие удобства есть в общежитии?</h3>
+                            <i class="fas fa-plus faq__icon"></i>
+                        </div>
+                        <div class="faq__answer">
+                            <p>В общежитии есть: прачечная, общие кухни, комнаты отдыха, спортзал, библиотека, компьютерный класс, парковка.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item animate-fade-up delay-4" data-category="internet">
+                        <div class="faq__question">
+                            <h3>Есть ли Wi-Fi в общежитии?</h3>
+                            <i class="fas fa-plus faq__icon"></i>
+                        </div>
+                        <div class="faq__answer">
+                            <p>Да, бесплатный Wi-Fi доступен во всех помещениях общежития. Логин и пароль выдаются при заселении.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>Общежитие №2 МГИМО</h3>
+                    <p>Комфортное проживание для студентов в центре Москвы</p>
+                    <div class="footer__social">
+                        <a href="https://t.me/dorm2_mgimo" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-vk"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="#contacts">Контакты</a></li>
+                        <li><a href="#rules">Правила</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#student-council">Студсовет</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> dorm2@mgimo.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ул. Студенческая, д. 2</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 Общежитие №2 МГИМО. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <!-- <script src="assets/js/lang-switcher.js"></script> -->
+    
+    <!-- Simple Language Toggle Script -->
+    <script>
+        // Translation data
+        const translations = {
+            ru: {
+                // Navigation
+                'nav-contacts': 'Контакты',
+                'nav-location': 'Адреса',
+                'nav-infrastructure': 'Инфраструктура',
+                'nav-rules': 'Правила',
+                'nav-student-council': 'Студсовет',
+                'nav-faq': 'FAQ',
+                
+                // Home section
+                'home-title': 'Добро пожаловать в',
+                'home-title-highlight': 'Общежитие №2 МГИМО',
+                'home-description': 'Полный гид для первокурсников МГИМО по заселению и комфортному проживанию в общежитии',
+                'btn-quick-guide': 'Быстрый гид',
+                'btn-contacts': 'Контакты',
+                'telegram-link': 'TG-канал',
+                
+                // Quick guide section
+                'quick-guide-title': 'Быстрые ссылки',
+                'quick-guide-subtitle': 'Основная информация для новых жильцов',
+                
+                // Contacts section
+                'contacts-title': 'Контакты',
+                'contacts-subtitle': 'Вся необходимая контактная информация'
+            },
+            en: {
+                // Navigation
+                'nav-contacts': 'Contacts',
+                'nav-location': 'Address',
+                'nav-infrastructure': 'Infrastructure',
+                'nav-rules': 'Rules',
+                                 'nav-student-council': 'Council',
+                'nav-faq': 'FAQ',
+                
+                // Home section
+                'home-title': 'Welcome to',
+                'home-title-highlight': 'MGIMO Dormitory #2',
+                'home-description': 'Complete guide for MGIMO freshmen on settling in and comfortable living in the dormitory',
+                'btn-quick-guide': 'Quick Guide',
+                'btn-contacts': 'Contacts',
+                'telegram-link': 'TG Channel',
+                
+                // Quick guide section
+                'quick-guide-title': 'Quick Links',
+                'quick-guide-subtitle': 'Essential information for new residents',
+                
+                // Contacts section
+                'contacts-title': 'Contacts',
+                'contacts-subtitle': 'All necessary contact information'
+            }
+        };
+
+        function translatePage(lang) {
+            // Update elements with data-translate attribute
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update document language
+            document.documentElement.lang = lang;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggles = document.querySelectorAll('.lang-toggle');
+            
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const currentLang = this.getAttribute('data-lang');
+                    const newLang = currentLang === 'ru' ? 'en' : 'ru';
+                    
+                    // Update all toggles
+                    toggles.forEach(t => t.setAttribute('data-lang', newLang));
+                    
+                    // Translate page
+                    translatePage(newLang);
+                    
+                    // Save to localStorage
+                    localStorage.setItem('selectedLanguage', newLang);
+                    
+                    // Show notification
+                    const langName = newLang === 'ru' ? 'Русский' : 'English';
+                    const notificationText = newLang === 'ru' ? 
+                        `Язык изменен на ${langName}` : 
+                        `Language changed to ${langName}`;
+                    
+                    // Create simple notification
+                    const notification = document.createElement('div');
+                    notification.textContent = notificationText;
+                    notification.style.cssText = `
+                        position: fixed;
+                        top: 100px;
+                        right: 20px;
+                        background: #3B82F6;
+                        color: white;
+                        padding: 12px 20px;
+                        border-radius: 8px;
+                        z-index: 9999;
+                        font-family: Arial, sans-serif;
+                    `;
+                    
+                    document.body.appendChild(notification);
+                    
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 3000);
+                });
+            });
+            
+            // Load saved language
+            const savedLang = localStorage.getItem('selectedLanguage') || 'ru';
+            toggles.forEach(toggle => toggle.setAttribute('data-lang', savedLang));
+            translatePage(savedLang);
+            
+            // Плавная прокрутка для кнопок навигации
+            const smoothScrollButtons = document.querySelectorAll('.btn-guide, .btn-contacts');
+            smoothScrollButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Для кнопок "Быстрый гид" и "Контакты" добавляем отступ сверху
+                        if (this.classList.contains('btn-guide') || this.classList.contains('btn-contacts')) {
+                            const headerHeight = document.querySelector('.header').offsetHeight;
+                            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                            const offsetPosition = elementPosition - headerHeight - 10; // 10px дополнительного отступа
+                            
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        } else {
+                            // Для остальных кнопок стандартная прокрутка
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start',
+                                inline: 'nearest'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
