@@ -10,7 +10,6 @@ class AnimationController {
   init() {
     this.setupScrollAnimations();
     this.setupHoverAnimations();
-    this.setupCounterAnimations();
     this.setupParallaxEffects();
     this.setupLoadingAnimations();
     this.bindEvents();
