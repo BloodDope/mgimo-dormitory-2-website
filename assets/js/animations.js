@@ -11,7 +11,6 @@ class AnimationController {
     this.setupScrollAnimations();
     this.setupHoverAnimations();
     this.setupParallaxEffects();
-    this.setupLoadingAnimations();
     this.bindEvents();
   }
 
